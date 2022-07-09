@@ -11,8 +11,10 @@ public class InicioUsuario {
 	}
 	
 	public void menu(Usuario user) throws SQLException {
-
-		System.out.println("Hola "+user.getNombre());
+		
+		System.out.println();
+		System.out.println("Hola "+user.getNombre()+" gracias por elegirnos");
+		System.out.println();
 		Scanner entrada = new Scanner(System.in);	
 		int opcion = 0;
 
@@ -59,16 +61,18 @@ public class InicioUsuario {
 				String nom_producto= rs2.getString("nombre_producto");
 				double precio = rs2.getDouble("precio_unit_producto");
 				
-				System.out.println("id: "+id_producto);
-				System.out.println("nombre producto: "+nom_producto);
-				System.out.println("precio: "+precio);
-				
+				System.out.println("Cod: "+id_producto);
+				System.out.println("Producto: "+nom_producto);
+				System.out.println("$: "+precio);
+				System.out.println();
 			}
 			
 			System.out.println("Seleccione id del producto : ");
 			int idSel = entrada.nextInt();
-			System.out.println("Ingrese la cantidad de productos: ");
+			System.out.println();
+			System.out.println("Cantidad de productos: ");
 			int cantP = entrada.nextInt();
+			System.out.println();
 			
 			String consultaStock = "Select * from producto "
 					+ "where id_producto ="+"'"+idSel+"'";
@@ -90,13 +94,13 @@ public class InicioUsuario {
 					
 				}
 				else {
-					System.out.println("No hay stock del producto");
+					System.out.println("Sin stock del Producto");
 				}
 			}
 			
 			break;
 		case 2: 
-			System.out.println("Mostrando productos del carrito... ");
+			System.out.println("Productos en Carrito... ");
 			
 			Carrito carritoAux = user.getCarrito();
 			carritoAux.recorrerCarrito();
@@ -110,7 +114,7 @@ public class InicioUsuario {
 			break;
 		
 		default: 
-			System.out.println("opcion incorrecta");
+			System.out.println("Opcion Incorrecta");
 		    break;
 		}
 		

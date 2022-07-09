@@ -43,7 +43,7 @@ public class Registro {
 			
 			Conexion conexion = new Conexion();
 			conexion.realizaConsulta(sql);
-			System.out.println("Usuario cargado");
+			System.out.println("ya sos cliente Supermark :)");
 		}
 		
 		else {

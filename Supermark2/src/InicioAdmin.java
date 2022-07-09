@@ -10,9 +10,4 @@ public class InicioAdmin {
 		System.out.println("MENU DE ADMINISTRADOR :)");
 	// TODO Auto-generated constructor stub
 	}
-	
-	
-		//falta implementar	
-		
-		
 	}

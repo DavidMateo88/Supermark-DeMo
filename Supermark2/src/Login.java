@@ -20,14 +20,14 @@ public class Login {
 		
 		String sql = "select * from usuario where email_usuario="+"'"+
 		this.email+"'"+" and contrasenia_usuario="+"'"+this.contra+"'";
-		//System.out.println(sql);
+		
 		
 		ResultSet rs = conexion.devuelveConsulta(sql);
 		
 		while(rs.next()) {
 			System.out.println("Ingreso Exitoso!!!!");
 			
-			int id_user=rs.getInt("id_usuario"); //nombre de columna
+			int id_user=rs.getInt("id_usuario");
 			String nombre=rs.getString("nombre_usuario");
 			String apellido=rs.getString("apellido_usuario");
 			String email=rs.getString("email_usuario");

@@ -1,4 +1,4 @@
-import java.sql.ResultSet;
+//import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.Scanner;
 
@@ -7,18 +7,18 @@ public class Principal {
 	public static void main(String[] args) throws SQLException {
 		
 		try (Scanner teclado = new Scanner (System.in)) {
-			System.out.println("=*=*=SuperMark=*=*=");
+			System.out.println("=*=*====SuperMark====*=*=");
 			System.out.println("Ingrese una opcion: ");
 			System.out.println("1 - Ingresar\n2 - Registrarse");
 			int opcion=teclado.nextInt();
 			
 			if(opcion==1) {
 		
-		System.out.println("Ingrese su email: ");
+		System.out.println("Ingrese E-mail: ");
 		Scanner entrada = new Scanner (System.in);
 		String email=entrada.nextLine();
 		
-		System.out.println("Ingrese su contraseña: ");
+		System.out.println("Ingrese Contraseña: ");
 		Scanner entrada2 = new Scanner (System.in);
 		String contra=entrada2.nextLine();
 		
@@ -37,11 +37,12 @@ public class Principal {
 						
 		}
 		else {
-			System.out.println("Algo salio mal :(");
+			System.out.println("Algo salio mal, ya estas registrado?");
 		}	
 			}
 		else {
-			System.out.println("Registro");
+			System.out.println("Vamos a Registrarnos");
+			System.out.println();
 			Registro registro1 = new Registro();
 			registro1.validarReg();
 		}
